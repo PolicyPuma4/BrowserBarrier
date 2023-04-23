@@ -39,9 +39,6 @@ Source: "{#MyAppName}_Unicode_32.exe"; DestDir: "{app}"; DestName: "{#MyAppExeNa
 Source: "{#MyAppName}_Unicode_64.exe"; DestDir: "{app}"; DestName: "{#MyAppExeName}"; Check: Is64BitInstallMode; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
-[Run]
-Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
-
 [Registry]
 Root: HKCU; Subkey: "SOFTWARE\RegisteredApplications"; ValueType: string; ValueName: "BrowserBarrier"; ValueData: "Software\Clients\StartMenuInternet\BrowserBarrier\Capabilities"; Flags: uninsdeletevalue
 Root: HKCU; Subkey: "SOFTWARE\Classes\BrowserBarrierURL"; Flags: uninsdeletekey
