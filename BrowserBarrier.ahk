@@ -26,8 +26,7 @@ for character in StrSplit(url) {
     scheme := scheme character
 }
 
-; myGui := Gui("+ToolWindow +AlwaysOnTop", "")
-myGui := Gui("+AlwaysOnTop", "")
+myGui := Gui("+ToolWindow +AlwaysOnTop", "")
 
 associations := []
 for hive in ["HKEY_CURRENT_USER", "HKEY_LOCAL_MACHINE"] {
